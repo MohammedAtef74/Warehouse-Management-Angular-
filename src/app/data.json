@@ -1,0 +1,171 @@
+
+{
+        "warehouse": [
+            {
+                "name": "warehouse1",
+                "types": [
+                    {
+                        "name": "type A",
+                        "products": [
+                            {
+                                "name": "product1",
+                                "quantity": "2",
+                                "onhand": "5"                                
+                            },
+                            {
+                                "name": "product2",
+                                "quantity": "3",
+                                "onhand": "10"
+                            },
+                            {
+                                "name": "product3",
+                                "quantity": "1",
+                                "onhand": "15"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "type B",
+                        "products": [
+                            {
+                                "name": "product 4",
+                                "quantity": "4",
+                                "onhand": "20"
+                            },
+                            {
+                                "name": "product 5",
+                                "quantity": "2",
+                                "onhand": "30"
+                            },
+                            {
+                                "name": "product 6",
+                                "quantity": "5",
+                                "onhand": "40"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "type C",
+                        "products": [
+                            {
+                                "name": "product 7",
+                                "quantity": "2",
+                                "onhand": "50"
+                            },
+                            {
+                                "name": "product 8",
+                                "quantity": "1",
+                                "onhand": "60"
+                            },
+                            {
+                                "name": "product 9",
+                                "quantity": "3",
+                                "onhand": "70"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "warehouse2",
+                "types": [
+                    {
+                        "name": "type X",
+                        "products": [
+                            {
+                                "name": "product 1",
+                                "quantity": "2",
+                                "onhand": "943"
+                            },
+                            {
+                                "name": "product 2",
+                                "quantity": "3",
+                                "onhand": "234"
+                            },
+                            {
+                                "name": "product 3",
+                                "quantity": "1",
+                                "onhand": "232"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "type Y",
+                        "products": [
+                            {
+                                "name": "product 4",
+                                "quantity": "4",
+                                "onhand": "121"
+                            },
+                            {
+                                "name": "product 5",
+                                "quantity": "2",
+                                "onhand": "212"
+                            },
+                            {
+                                "name": "product 6",
+                                "quantity": "5",
+                                "onhand": "213"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "type Z",
+                        "products": [
+                            {
+                                "name": "product 8",
+                                "quantity": "2",
+                                "onhand": "200"
+                            },
+                            {
+                                "name": "product 9",
+                                "quantity": "1",
+                                "onhand": "100"
+
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "warehouse3",
+                "types": [
+                    {
+                        "name": "type E",
+                        "products": [
+                            {
+                                "name": "product 1",
+                                "quantity": "2",
+                                "onhand": "213"
+                            },
+                            {
+                                "name": "product 2",
+                                "quantity": "3",
+                                "onhand": "340"
+                            },
+                            {
+                                "name": "product 3",
+                                "quantity": "1",
+                                "onhand": "112"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "type F",
+                        "products": [
+                            {
+                                "name": "product 4",
+                                "quantity": "4",
+                                "onhand": "349"
+                            },
+                            {
+                                "name": "product 5",
+                                "quantity": "2",
+                                "onhand": "321"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }

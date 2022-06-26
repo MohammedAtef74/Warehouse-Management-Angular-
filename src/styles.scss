@@ -1,0 +1,23 @@
+
+/* You can add global styles to this file, and also import other style files */
+$mainColor: rgb(67, 67, 187);
+$secondColor:rgb(98, 221, 221);
+$backGround-color:rgba(128, 128, 128, 0.295);
+body
+{
+    background-color: $backGround-color;
+}
+
+i
+{
+    cursor: pointer;
+}
+
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: none;
+}

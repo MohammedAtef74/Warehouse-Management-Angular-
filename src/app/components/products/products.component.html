@@ -1,0 +1,257 @@
+<section>
+
+    <div class="head-title">
+        <h4>Product</h4>
+      </div>
+
+    <div class="container-fluid bg-light ">
+        <div class="info mx-5 py-2">
+            <h6><i class="fa-solid fa-thin fa-window-restore"></i> Basic Information</h6>
+            <hr>
+        </div>   
+        <form>
+
+        <div class="row  mx-5 py-3">
+
+            <div class="col-md-4">
+
+                <div class="content-1">
+                    <div class="details">
+                        <label for="">Warehouse <span class="text-danger">*</span></label>
+                        <span> 
+                          <select class="form-control mb-3 " (change)="warehouseSelected($event)" aria-label=".form-select-lg example" >
+                            <option [disabled]="true">--Select Warehouse--</option>
+                            <option *ngFor="let warehouse of _data.warehouse"  >
+                               {{warehouse.name}}
+                              </option>
+                            
+                          </select>
+                        </span>
+                      </div>
+                </div>
+
+            </div>
+
+              <!--  -->
+
+            <div class="col-md-4">
+
+                <div class="content-2">
+                    <div class="details">
+                        <label for="">Type <span class="text-danger">*</span></label>
+
+                        <span> 
+                          <select [disabled]="typeDisable" class="form-control mb-3 " (change)="typeSelected($event)" aria-label=".form-select-lg example" >
+                            <option [disabled]="true">--Select Type--</option>
+                            <option *ngFor="let type of typesOfWarehouse"> 
+                            <a > {{type.name}}</a>  
+                            </option>
+                          </select>
+                        </span>
+                      </div>
+                </div>
+
+            </div>
+
+              <!--  -->
+              <div class="col-md-4">
+
+                <div class="content-3 d-flex justify-content-center">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Show Zero Balance</label>
+                      </div>
+                </div>
+
+            </div>
+            
+              <!--  -->
+              <div class="col-md-4">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <h6 class="classifiction">Product Classifiction</h6>
+
+                        <div class="content-4">
+        
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input (click)="unselected()"   type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline1">All Product</label>
+                              </div>
+                        </div>
+                    </div>
+                    <!--  -->
+
+                    <div class="col-md-6">
+                        <div class="content-5">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input (click)="selected()" type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline2">Specific Product</label>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+              <!--  -->
+              <div class="col-md-4">
+
+                <div *ngIf="showProduct" class="content-6">
+                    <div class="details">
+                        <label for="">Product <span class="text-danger">*</span></label>
+                        <span> 
+                          <select (change)="productSelected($event)" class="form-control mb-3 " aria-label=".form-select-lg example" >
+                            <option [disabled]="true">--Select Product--</option>
+                            <option *ngFor="let product of productsOfTypes" >{{product.name}} </option>
+                          </select>
+                        </span>
+                      </div>
+                </div>
+
+            </div>
+        </div>
+          <!--  -->
+
+        <div class="search mx-5 py-2 d-flex justify-content-end pb-5">
+            <button (click)="search($event)"  class="btn">Search</button>
+        </div> 
+        <!--  -->
+      </form>
+
+      
+
+
+
+        <!----------------------- second row------------------- -->
+        <div class="info mx-5 py-2 ">
+            <h6><i class="fa-solid fa-thin fa-file-lines"></i> Products Details</h6>
+            <hr>
+        </div> 
+         <!--  -->
+        <div class="row  mx-5 py-3 mb-5">
+
+            <div class="col-md-4  head">
+
+                <div class="content-7">
+                    <div class="details my-2">
+                        <label for="">Product</label>
+                           <input type="text" class="form-control" placeholder="">
+                      </div>
+                </div>
+
+            </div>
+
+              <!--  -->
+
+            <div class="col-md-4 head">
+
+                <div class="content-8">
+                    <div class="details my-2">
+                        <label for="">On-Hand</label>
+                           <input type="text" class="form-control" placeholder="">
+                      </div>
+                </div>
+
+            </div>
+               <!--  -->
+
+               <div class="col-md-4 head">
+
+                <div class="content-9">
+                    <div class="details my-2">
+                        <label for="">Type</label>
+                           <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+
+            </div>
+
+              
+
+
+        </div>
+        <div *ngIf="showtable && !specificProduct">
+
+          <div  *ngFor="let product of productsOfTypes"  class="row  mx-5 py-3 mb-5">
+
+            <div class="col-md-4  head">
+  
+                <div class="content-7">
+                    <div class="details my-2">
+                      <div>{{product.name}}</div>
+                      </div>
+                </div>
+  
+            </div>
+  
+              <!--  -->
+  
+            <div class="col-md-4 head">
+  
+                <div class="content-8">
+                    <div class="details my-2">
+                      <div>{{product.onhand}}</div>
+                      </div>
+                </div>
+  
+            </div>
+               <!--  -->
+  
+               <div class="col-md-4 head">
+  
+                <div class="content-9">
+                    <div class="details my-2">
+                      <div>{{selectedType}}</div>
+                      </div>
+                  </div>
+  
+            </div>
+          </div>
+
+ 
+            </div>
+            <div *ngIf="showtable && specificProduct">
+              <div   class="row  mx-5 py-3 mb-5">
+    
+                <div class="col-md-4  head">
+      
+                    <div class="content-7">
+                        <div class="details my-2">
+                          <div>{{specificProduct.name}}</div>
+                          </div>
+                    </div>
+      
+                </div>
+      
+                  <!--  -->
+      
+                <div class="col-md-4 head">
+      
+                    <div class="content-8">
+                        <div class="details my-2">
+                          <div>{{specificProduct.onhand}}</div>
+                          </div>
+                    </div>
+      
+                </div>
+                   <!--  -->
+      
+                   <div class="col-md-4 head">
+      
+                    <div class="content-9">
+                        <div class="details my-2">
+                          <div>{{selectedType}}</div>
+                          </div>
+                      </div>
+      
+                </div>
+              </div>
+              </div>
+
+      </div>
+
+    
+</section>
+

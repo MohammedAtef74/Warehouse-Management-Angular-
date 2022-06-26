@@ -1,0 +1,45 @@
+ 
+ <section class="pt-5 mt-4 mx-1 ">
+      
+
+    <div aria-label="breadcrumb py-5 ">
+       <ol class="breadcrumb ">
+   
+           <div class="modal-product">
+               <li><i class="fa-solid fa-grid fa-bars mr-4" data-toggle="modal" data-target="#exampleModal"></i> 
+               </li>
+   
+           </div>
+           <li (click)="hideProduct()"  class="breadcrumb-item"><a routerLink="home"> <i class="fa-solid fa-thin fa-house">  </i> > Home > </a></li>
+         <li class="breadcrumb-item">
+           <a *ngIf="showProductNav==true" routerLink="products"><i class="fa-solid fa-thin fa-cart-shopping"></i> Products</a>
+          </li>
+
+       </ol>
+     </div>
+    </section>
+   
+     
+    <!-- modal product -->
+   
+     
+     <!-- Modal -->
+     
+           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-xl" role="document">
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel">
+                       <a (click)="closeModal()" routerLink="products">  <img src="../../../assets/images/game.png" class="product-img" alt=""> </a>
+                       <a ><h6 class="text-left">product</h6> </a>
+                      </h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                     </button>
+
+                   </div>
+   
+                 </div>
+               </div>
+         </div>
+   
